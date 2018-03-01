@@ -21,7 +21,7 @@ class Header extends Component {
           <h2>{title}</h2>
           
           <ul className="Menu">
-            {items && items.map((item,key) =><li key={key}>{item.title}</li>)} 
+            {items && items.map((item,key) => <li key={key}>{item.title}</li>)} 
           </ul>
         </div>
       </div>

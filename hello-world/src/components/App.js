@@ -13,7 +13,7 @@ class App extends Component {
       <div className="App">
         <Header title="Practica React" items={items} />
         <Content />
-        <Footer />
+        <Footer copyright="&copy; Kbaez 2018"/>
       </div>
     );
   }
