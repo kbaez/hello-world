@@ -7,7 +7,7 @@ import App from './components/App';
 import About from './components/About';
 import Contact from './components/Contact';
 import Home from './components/Home';
-import Home from './components/Page404';
+import Page404 from './components/Page404';
 
 const AppRoutes = () =>
   <App>
