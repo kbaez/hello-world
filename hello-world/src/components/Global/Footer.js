@@ -11,10 +11,10 @@ class Footer extends Component {
   };
 
   render() {
-  	const {copyright = '&copy; React 2018'} = this.props;
+  	const {copyright='&copy; React 2018'} = this.props;
     return (
       <div className="Footer">
-        <p dangerouslySetInnerHTML ={{__html: copyright}} />
+        <p dangerouslySetInnerHTML={{__html: copyright}} />
       </div>
     );
   }
