@@ -1,6 +1,7 @@
 //dependencies
 import React, { Component } from 'react';
 import ProTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 //assets
 import logo from './images/logo.svg';
 import './css/Header.css';
@@ -10,6 +11,10 @@ class Header extends Component {
     title: ProTypes.string.isRequired,
     items: ProTypes.array.isRequired
   };
+
+  createListItem(item, key){
+    return <li key={key}><Link to={item.url}>{item.title}</Link></li>
+  }
 
   render() {
     const {title, items} = this.props;
@@ -21,7 +26,9 @@ class Header extends Component {
           <h2>{title}</h2>
           
           <ul className="Menu">
-            {items && items.map((item,key) => <li key={key}>{item.title}</li>)} 
+          {
+            items && items.map(this.createListItem) 
+          }
           </ul>
         </div>
       </div>
